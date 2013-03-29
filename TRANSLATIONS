@@ -1,0 +1,5 @@
+# build main catalog
+xgettext --language=Python --keyword=_ --output=po/OpenStereo.pot `find . -name "*.py"`
+# compile translations
+# example
+msgfmt po/it_IT.po --output-file i18n/it_IT/LC_MESSAGES/it_IT.mo
