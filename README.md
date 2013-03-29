@@ -9,3 +9,5 @@ all graphic capabilities are provided by the Matplolib library, including on-scr
 graphic exporting to common desktop formats (emf, eps, ps, pdf, png, svg).
 
 OpenStereo is released under the GNU General Public License v.3.
+
+This fork aims to add some localization features to OpenStereo.
