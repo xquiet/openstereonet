@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStereo 0.1.2f\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-29 18:47+0100\n"
+"PO-Revision-Date: 2013-03-29 19:53+0100\n"
+"Last-Translator: Matteo Pasotti <matteo.pasotti@gmail.com>\n"
+"Language-Team:  <matteo@mageia.it>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+
+#: MainForm.py:109
+msgid "Open &Planar Data (Dipdir/Dip)\tCtrl+P"
+msgstr "Apri Dati &Planari (Immersione/Inclinazione)\tCtrl+P"
+
+#: MainForm.py:109
+#: MainForm.py:209
+msgid "Open planar data (Dipdir/Dip)"
+msgstr "Apri dati planari (Immersione/Inclinazione)"
+
+#: MainForm.py:112
+msgid "Open Planar Data (&Strike/Dip)\tCtrl+S"
+msgstr "Apri Dati Planari (&Strike/Inclinazione)\tCtrl+S"
+
+#: MainForm.py:112
+#: MainForm.py:210
+msgid "Open planar data (Strike/Dip)"
+msgstr "Apri dati planari (&Strike/Inclinazione)"
+
+#: MainForm.py:115
+msgid "Open &Linear Data (Trend/Plunge)\tCtrl+L"
+msgstr "Apri Dati &Lineari (Trend/Plunge)\tCtrl+L"
+
+#: MainForm.py:115
+#: MainForm.py:211
+msgid "Open linear data (Trend/Plunge)"
+msgstr "Apri dati lineari (Trend/Plunge)"
+
+#: MainForm.py:118
+msgid "Open Small &Circle Data (Trend/Plunge/Radius)\tCtrl+C"
+msgstr "Apri Dati Piccolo &Cerchio (Trend/Plunge/Raggio)\tCtrl+C"
+
+#: MainForm.py:118
+#: MainForm.py:213
+msgid "Open Small Circle Data (Trend/Plunge/Radius)"
+msgstr "Apri Dati Piccolo Cerchio (Trend/Plunge/Raggio)"
+
+#: MainForm.py:125
+msgid "Open &Fault Data (Dipdir/Dip // Trend/Plunge // Sense)\tCtrl+F"
+msgstr "Apri Dati &Faglia (Immersione/Inclinazione // Trend/Plunge // Senso)\tCtrl+F"
+
+#: MainForm.py:125
+msgid "Open fault data (Dipdir/Dip // Trend/Plunge // Sense)"
+msgstr "Apri dati faglia (Immersione/Inclinazione // Trend/Plunge // Senso)"
+
+#: MainForm.py:128
+msgid "Open Pla&nes from Fault Data (Dipdir/Dip)\tCtrl+N"
+msgstr "Apri Pia&ni da Dati Faglia (Immersione/Inclinazione)\tCtrl+N"
+
+#: MainForm.py:128
+msgid "Open Planes from Fault Data (Dipdir/Dip)"
+msgstr "Apri Piani da Dati Faglia (Immersione/Inclinazione)"
+
+#: MainForm.py:131
+msgid "Open L&ines from Fault Data (Trend/Plunge)\tCtrl+I"
+msgstr "Apri L&inee da Dati Faglia (Trend/Plunge)\tCtrl+I"
+
+#: MainForm.py:131
+msgid "Open lines from Fault Data (Trend/Plunge)"
+msgstr "Apri linee da Dati Faglia (Trend/Plunge)"
+
+#: MainForm.py:134
+msgid "Open &TectonicsFP Fault Data (comma separated)\tCtrl+T"
+msgstr ""
+
+#: MainForm.py:134
+msgid "Open TectonicsFP Fault Data"
+msgstr ""
+
+#: MainForm.py:137
+msgid "Open T-T&ECTO Fault Data (tab separated)\tCtrl+E"
+msgstr ""
+
+#: MainForm.py:137
+msgid "Open T-TECTO Fault Data"
+msgstr ""
+
+#: MainForm.py:140
+msgid "F&ault Data"
+msgstr "Dati Faglia"
+
+#: MainForm.py:144
+msgid "&Quit"
+msgstr "Chiudi"
+
+#: MainForm.py:144
+msgid "Quit the program"
+msgstr "Chiudi il programma"
+
+#: MainForm.py:151
+msgid "&Merge datasets"
+msgstr "Unisci set di dati"
+
+#: MainForm.py:151
+msgid "Merge datasets"
+msgstr "Unisci set di dati"
+
+#: MainForm.py:154
+msgid "&Rotate datasets"
+msgstr "&Ruota set di dati"
+
+#: MainForm.py:154
+msgid "Rotate datasets"
+msgstr "Ruota set di dati"
+
+#: MainForm.py:195
+msgid "&About"
+msgstr ""
+
+#: MainForm.py:195
+msgid "About"
+msgstr ""
+
+#: MainForm.py:200
+msgid "&File"
+msgstr ""
+
+#: MainForm.py:201
+msgid "&Tools"
+msgstr "Strumenti"
+
+#: MainForm.py:202
+msgid "&Help"
+msgstr "Aiuto"
+
+#: MainForm.py:212
+msgid "Open Fault Data (Dipdir/Dip // Trend/Plunge // Sense)"
+msgstr "Apri Dati Faglia (Immersione/Inclinazione // Trend/Plunge // Sense)"
+
+#: MainForm.py:243
+msgid "Stereonet"
+msgstr "Stereonet"
+
+#: MainForm.py:244
+msgid "Rose diagram"
+msgstr "Diagramma a Rosa"
+
+#: MainForm.py:245
+msgid "Statistics"
+msgstr "Statistiche"
+
+#: MainForm.py:246
+msgid "Histogram"
+msgstr "Istrogramma"
+
