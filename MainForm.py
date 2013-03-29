@@ -49,6 +49,10 @@ import types as types
 #import numpy as np
 from wx.lib.wordwrap import wordwrap
 
+# import i18n
+import i18n
+_ = i18n.language.ugettext #use ugettext instead of getttext to avoid unicode errors
+
 # import matplotlib
 # this sets to use wxagg instead of pyQt
 import matplotlib as mpl
@@ -78,7 +82,7 @@ class MainFrame(wx.Frame):
 
         self.pyversion = 'OpenStereo - Open-source, Multiplatform Stereonet Analysis'
 
-        self.OpenStereo_version = '0.1.2 devel' # this is for the 'about' box
+        self.OpenStereo_version = '0.1.3' # this is for the 'about' box
 
         self.currentDirectory = os.getcwd()
 
@@ -102,52 +106,52 @@ class MainFrame(wx.Frame):
 
        # create the file menu
         filemenu=wx.Menu()
-        menuOpenPlanarDDD = filemenu.Append(-1, 'Open &Planar Data (Dipdir/Dip)\tCtrl+P', 'Open planar data (Dipdir/Dip)')
+        menuOpenPlanarDDD = filemenu.Append(-1, _('Open &Planar Data (Dipdir/Dip)\tCtrl+P'), _('Open planar data (Dipdir/Dip)'))
         self.Bind(wx.EVT_MENU, self.OnOpenPlanarDataDDD, menuOpenPlanarDDD)
 
-        menuOpenPlanarRH = filemenu.Append(-1, 'Open Planar Data (&Strike/Dip)\tCtrl+S', 'Open planar data (Strike/Dip)')
+        menuOpenPlanarRH = filemenu.Append(-1, _('Open Planar Data (&Strike/Dip)\tCtrl+S'), _('Open planar data (Strike/Dip)'))
         self.Bind(wx.EVT_MENU, self.OnOpenPlanarDataRH, menuOpenPlanarRH)
 
-        menuOpenLinear = filemenu.Append(-1, 'Open &Linear Data (Trend/Plunge)\tCtrl+L', 'Open linear data (Trend/Plunge)')
+        menuOpenLinear = filemenu.Append(-1, _('Open &Linear Data (Trend/Plunge)\tCtrl+L'), _('Open linear data (Trend/Plunge)'))
         self.Bind(wx.EVT_MENU, self.OnOpenLinearData, menuOpenLinear)
 
-        menuOpenSmall = filemenu.Append(-1, 'Open Small &Circle Data (Trend/Plunge/Radius)\tCtrl+C', 'Open Small Circle Data (Trend/Plunge/Radius)')
+        menuOpenSmall = filemenu.Append(-1, _('Open Small &Circle Data (Trend/Plunge/Radius)\tCtrl+C'), _('Open Small Circle Data (Trend/Plunge/Radius)'))
         self.Bind(wx.EVT_MENU, self.OnOpenSmallData, menuOpenSmall)
 
 
         # fault data options submenu
         fault = wx.Menu()
 
-        menuOpenFault = fault.Append(-1, 'Open &Fault Data (Dipdir/Dip // Trend/Plunge // Sense)\tCtrl+F', 'Open fault data (Dipdir/Dip // Trend/Plunge // Sense)')
+        menuOpenFault = fault.Append(-1, _('Open &Fault Data (Dipdir/Dip // Trend/Plunge // Sense)\tCtrl+F'), _('Open fault data (Dipdir/Dip // Trend/Plunge // Sense)'))
         self.Bind(wx.EVT_MENU, self.OnOpenFaultData, menuOpenFault)
 
-        menuOpenFaultPlanes = fault.Append(-1, 'Open Pla&nes from Fault Data (Dipdir/Dip)\tCtrl+N', 'Open Planes from Fault Data (Dipdir/Dip)')
+        menuOpenFaultPlanes = fault.Append(-1, _('Open Pla&nes from Fault Data (Dipdir/Dip)\tCtrl+N'), _('Open Planes from Fault Data (Dipdir/Dip)'))
         self.Bind(wx.EVT_MENU, self.OnOpenFaultPlanes, menuOpenFaultPlanes)
 
-        menuOpenFaultLines = fault.Append(-1, 'Open L&ines from Fault Data (Trend/Plunge)\tCtrl+I', 'Open lines from Fault Data (Trend/Plunge)')
+        menuOpenFaultLines = fault.Append(-1, _('Open L&ines from Fault Data (Trend/Plunge)\tCtrl+I'), _('Open lines from Fault Data (Trend/Plunge)'))
         self.Bind(wx.EVT_MENU, self.OnOpenFaultLines, menuOpenFaultLines)
 
-        menuOpenFaultTectonicsFP = fault.Append(-1, 'Open &TectonicsFP Fault Data (comma separated)\tCtrl+T', 'Open TectonicsFP Fault Data')
+        menuOpenFaultTectonicsFP = fault.Append(-1, _('Open &TectonicsFP Fault Data (comma separated)\tCtrl+T'), _('Open TectonicsFP Fault Data'))
         self.Bind(wx.EVT_MENU, self.OnOpenFaultTectonicsFP, menuOpenFaultTectonicsFP)
 
-        menuOpenFaultTTECTO = fault.Append(-1, 'Open T-T&ECTO Fault Data (tab separated)\tCtrl+E', 'Open T-TECTO Fault Data')
+        menuOpenFaultTTECTO = fault.Append(-1, _('Open T-T&ECTO Fault Data (tab separated)\tCtrl+E'), _('Open T-TECTO Fault Data'))
         self.Bind(wx.EVT_MENU, self.OnOpenFaultTTECTO, menuOpenFaultTTECTO)
         
-        filemenu.AppendMenu(-1, 'F&ault Data', fault)
+        filemenu.AppendMenu(-1, _('F&ault Data'), fault)
 
 
         # exit
-        menuExit = filemenu.Append(wx.ID_EXIT, '&Quit', 'Quit the program')
+        menuExit = filemenu.Append(wx.ID_EXIT, _('&Quit'), _('Quit the program'))
         self.Bind(wx.EVT_MENU, self.Exit, menuExit)
 
 
 
     #create the tools menu
         toolsmenu=wx.Menu()
-        menuMergeData = toolsmenu.Append(-1, '&Merge datasets', 'Merge datasets')
+        menuMergeData = toolsmenu.Append(-1, _('&Merge datasets'), _('Merge datasets'))
         self.Bind(wx.EVT_MENU, self.OnMergeData, menuMergeData)
 
-        menuRotateData = toolsmenu.Append(-1, '&Rotate datasets', 'Rotate datasets')
+        menuRotateData = toolsmenu.Append(-1, _('&Rotate datasets'), _('Rotate datasets'))
         self.Bind(wx.EVT_MENU, self.OnRotateData, menuRotateData)
 
         toolsmenu.AppendSeparator()
@@ -188,25 +192,25 @@ class MainFrame(wx.Frame):
 
     #create the help menu
         helpmenu=wx.Menu()
-        menuAbout = helpmenu.Append(-1, '&About', 'About')
+        menuAbout = helpmenu.Append(-1, _('&About'), _('About'))
         self.Bind(wx.EVT_MENU, self.onAboutDlg, menuAbout)
 
     #create the menubar for the frame and add the menu to it
         menuBar=wx.MenuBar()
-        menuBar.Append(filemenu, '&File')
-        menuBar.Append(toolsmenu, '&Tools')
-        menuBar.Append(helpmenu, '&Help')
+        menuBar.Append(filemenu, _('&File'))
+        menuBar.Append(toolsmenu, _('&Tools'))
+        menuBar.Append(helpmenu, _('&Help'))
         self.SetMenuBar(menuBar)
 
     #create the toolbar for the frame
         toolbar = self.CreateToolBar()
         toolbar.SetToolBitmapSize((16,16))  # sets icon size
 
-        toolbarOpenPlanarDD = toolbar.AddLabelTool(-1, 'Open', DD_ico, wx.NullBitmap, wx.ITEM_NORMAL, 'Open planar data (Dipdir/Dip)', '')
-        toolbarOpenPlanarRH = toolbar.AddLabelTool(-1, 'Open', RH_ico, wx.NullBitmap, wx.ITEM_NORMAL, 'Open planar data (Strike/Dip)', '')
-        toolbarOpenLinear = toolbar.AddLabelTool(-1, 'Open', L_ico, wx.NullBitmap, wx.ITEM_NORMAL, 'Open linear data (Trend/Plunge)', '')
-        toolbarOpenFault = toolbar.AddLabelTool(-1, 'Open', F_ico, wx.NullBitmap, wx.ITEM_NORMAL, 'Open Fault Data (Dipdir/Dip // Trend/Plunge // Sense)', '')
-        toolbarOpenSmall = toolbar.AddLabelTool(-1, 'Open', SC_ico, wx.NullBitmap, wx.ITEM_NORMAL, 'Open Small Circle Data (Trend/Plunge/Radius)', '')
+        toolbarOpenPlanarDD = toolbar.AddLabelTool(-1, 'Open', DD_ico, wx.NullBitmap, wx.ITEM_NORMAL, _('Open planar data (Dipdir/Dip)'), '')
+        toolbarOpenPlanarRH = toolbar.AddLabelTool(-1, 'Open', RH_ico, wx.NullBitmap, wx.ITEM_NORMAL, _('Open planar data (Strike/Dip)'), '')
+        toolbarOpenLinear = toolbar.AddLabelTool(-1, 'Open', L_ico, wx.NullBitmap, wx.ITEM_NORMAL, _('Open linear data (Trend/Plunge)'), '')
+        toolbarOpenFault = toolbar.AddLabelTool(-1, 'Open', F_ico, wx.NullBitmap, wx.ITEM_NORMAL, _('Open Fault Data (Dipdir/Dip // Trend/Plunge // Sense)'), '')
+        toolbarOpenSmall = toolbar.AddLabelTool(-1, 'Open', SC_ico, wx.NullBitmap, wx.ITEM_NORMAL, _('Open Small Circle Data (Trend/Plunge/Radius)'), '')
 
         self.Bind(wx.EVT_TOOL, self.OnOpenPlanarDataDDD, toolbarOpenPlanarDD)
         self.Bind(wx.EVT_TOOL, self.OnOpenPlanarDataRH, toolbarOpenPlanarRH)
@@ -236,10 +240,10 @@ class MainFrame(wx.Frame):
 #        self.gridPanel = grd.GridPanel(nb)
 
 #        nb.AddPage(self.gridPanel, "Data")
-        nb.AddPage(self.stereoPanel, "Stereonet")
-        nb.AddPage(self.rosePanel, "Rose diagram")
-        nb.AddPage(self.statsPanel, "Statistics")
-        nb.AddPage(self.histPanel, "Histogram")
+        nb.AddPage(self.stereoPanel, _("Stereonet"))
+        nb.AddPage(self.rosePanel, _("Rose diagram"))
+        nb.AddPage(self.statsPanel, _("Statistics"))
+        nb.AddPage(self.histPanel, _("Histogram"))
 
         nb_box = wx.BoxSizer(wx.VERTICAL) # sizer
         nb_box.Add(nb, 1, wx.EXPAND)
@@ -784,12 +788,15 @@ class MainFrame(wx.Frame):
         info.Name = "OpenStereo"
         info.Version = self.OpenStereo_version
         info.Copyright = "(C) 2009-2011 Carlos H. Grohmann and Ginaldo A.C. Campanha"
+        info.Copyright += "\n(C) 2012-2013 Matteo Pasotti"
         info.Description = wordwrap(
             "OpenStereo is a Open-source, multiplatform software for "
             "structural geology analysis using stereonets. ",
             350, wx.ClientDC(self.right_panel))
-        info.WebSite = ("http://www.igc.usp.br/openstereo", "OpenStereo Home Page")
-        info.Developers = ["Carlos H. Grohmann & Ginaldo A.C. Campanha"]
+        #info.WebSite = ("http://www.igc.usp.br/openstereo", "Original OpenStereo Home Page")
+	info.WebSite = ("https://github.com/xquiet/openstereo", "OpenStereo fork hosted at GitHub")
+        info.Developers = ["Carlos H. Grohmann & Ginaldo A.C. Campanha",
+			"Matteo Pasotti"]
         info.License = wordwrap('''OpenStereo is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by 
 the Free Software Foundation, either version 3 of the License, or 
