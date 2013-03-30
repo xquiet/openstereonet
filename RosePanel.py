@@ -63,6 +63,9 @@ from matplotlib.text import Text
 
 import numpy as np
 
+# import i18n
+import i18n
+_ = i18n.language.ugettext #use ugettext instead of getttext to avoid unicode errors
 
 #fonts = ['xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large']
 
@@ -117,22 +120,22 @@ class RosePanel(wx.Panel):
         self.fontSize = 'x-small'
 
 #define the controls
-        txt2 = wx.StaticText(self.left_panel, -1, 'Rose data')
-        txtp = wx.StaticText(self.left_panel, -1, '(planes)')
-        self.rbddir = wx.RadioButton(self.left_panel, -1, 'DipDir', style=wx.RB_GROUP)
-        self.rbstrk = wx.RadioButton(self.left_panel, -1, 'Strike')
-        txtl = wx.StaticText(self.left_panel, -1, '(lines)')
-        self.rbtrd = wx.RadioButton(self.left_panel, -1, 'Trend')
+        txt2 = wx.StaticText(self.left_panel, -1, _('Rose data'))
+        txtp = wx.StaticText(self.left_panel, -1, _('(planes)'))
+        self.rbddir = wx.RadioButton(self.left_panel, -1, _('DipDir'), style=wx.RB_GROUP)
+        self.rbstrk = wx.RadioButton(self.left_panel, -1, _('Strike'))
+        txtl = wx.StaticText(self.left_panel, -1, _('(lines)'))
+        self.rbtrd = wx.RadioButton(self.left_panel, -1, _('Trend'))
         self.rbddir.SetValue(True)
 
-        txt = wx.StaticText(self.left_panel, -1, 'Rose type')
-        self.rb360 = wx.RadioButton(self.left_panel, -1, '360 deg', style=wx.RB_GROUP)
-        self.rb180 = wx.RadioButton(self.left_panel, -1, '180 deg')
+        txt = wx.StaticText(self.left_panel, -1, _('Rose type'))
+        self.rb360 = wx.RadioButton(self.left_panel, -1, _('360 deg'), style=wx.RB_GROUP)
+        self.rb180 = wx.RadioButton(self.left_panel, -1, _('180 deg'))
         self.rb360.SetValue(True)
         
-        txt5 = wx.StaticText(self.left_panel, -1, 'Weighting')
-        self.rbfreq = wx.RadioButton(self.left_panel, -1, 'Frequency', style=wx.RB_GROUP)
-        self.rbwgt = wx.RadioButton(self.left_panel, -1, 'Weighted')#'Length/Dip')
+        txt5 = wx.StaticText(self.left_panel, -1, _('Weighting'))
+        self.rbfreq = wx.RadioButton(self.left_panel, -1, _('Frequency'), style=wx.RB_GROUP)
+        self.rbwgt = wx.RadioButton(self.left_panel, -1, _('Weighted'))#'Length/Dip')
         self.rbfreq.SetValue(True)
 
         grid1 = wx.GridSizer(12, 1)
@@ -151,23 +154,23 @@ class RosePanel(wx.Panel):
         grid1.Add(self.rbfreq,0, wx.LEFT, 5)
         grid1.Add(self.rbwgt,0, wx.LEFT, 5)
         
-        txt1 = wx.StaticText(self.left_panel, -1, 'Interval (deg)')
+        txt1 = wx.StaticText(self.left_panel, -1, _('Interval (deg)'))
         self.spin = FS.FloatSpin(self.left_panel, -1, size=(60, -1), value=10, min_val=1, max_val=90, increment=1, digits=0)
 
-        txt4 = wx.StaticText(self.left_panel, -1, 'Outer limit (%)')
+        txt4 = wx.StaticText(self.left_panel, -1, _('Outer limit (%)'))
         self.spin2 = FS.FloatSpin(self.left_panel, -1, size=(60, -1), value=10, min_val=1, max_val=100, increment=0.5, digits=1)
 
-        txt5 = wx.StaticText(self.left_panel, -1, 'Inner rings (%)')
+        txt5 = wx.StaticText(self.left_panel, -1, _('Inner rings (%)'))
         self.spin3 = FS.FloatSpin(self.left_panel, -1, size=(60, -1), value=2.5, min_val=0.5, max_val=100, increment=0.5, digits=1)
 
-        txt6 = wx.StaticText(self.left_panel, -1, 'Diagonals (deg)')
+        txt6 = wx.StaticText(self.left_panel, -1, _('Diagonals (deg)'))
         self.spin4 = FS.FloatSpin(self.left_panel, -1, size=(60, -1), value=22.5, min_val=0.5, max_val=90, increment=0.5, digits=1)
 
-        txt2 = wx.StaticText(self.left_panel, -1, 'Fill Colour')
+        txt2 = wx.StaticText(self.left_panel, -1, _('Fill Colour'))
         self.fcbtn = csel.ColourSelect(self.left_panel, pos=(0, 0), size=(60, 20))
         self.fcbtn.SetColour(self.fcolor)
 
-        txt3 = wx.StaticText(self.left_panel, -1, 'Outline Colour')
+        txt3 = wx.StaticText(self.left_panel, -1, _('Outline Colour'))
         self.lcbtn = csel.ColourSelect(self.left_panel, pos=(0, 0), size=(60, 20))
         self.lcbtn.SetColour(self.lcolor)
         
@@ -175,14 +178,14 @@ class RosePanel(wx.Panel):
 #        self.fontSizeCombo = wx.ComboBox(self.left_panel, -1, value=fonts[fonts.index(self.fontSize)], choices=fonts, style=wx.CB_DROPDOWN|wx.CB_READONLY, size=(80, -1))
 #        self.fontSizeCombo.SetSelection(fonts.index(self.fontSize))
         
-        self.cb_mean = wx.CheckBox(self.left_panel, -1, 'Show Mean')
+        self.cb_mean = wx.CheckBox(self.left_panel, -1, _('Show Mean'))
         self.cb_mean.SetValue(True)
 
-        txt8 = wx.StaticText(self.left_panel, -1, 'Line Colour')
+        txt8 = wx.StaticText(self.left_panel, -1, _('Line Colour'))
         self.mcbtn = csel.ColourSelect(self.left_panel, pos=(0, 0), size=(60, 20))
         self.mcbtn.SetColour(self.mcolor)
 
-        txt9 = wx.StaticText(self.left_panel, -1, 'Line Width')
+        txt9 = wx.StaticText(self.left_panel, -1, _('Line Width'))
         self.spin5 = FS.FloatSpin(self.left_panel, -1, size=(60, -1), value=1.5, min_val=0.5, max_val=10, increment=0.5, digits=1)
 
 
@@ -219,8 +222,8 @@ class RosePanel(wx.Panel):
 
 
 # create draw/clear buttons 
-        self.drawButton = wx.Button(self.right_panel, -1, 'Plot', size=(60, 30))
-        self.clearButton = wx.Button(self.right_panel, -1, 'Clear', size=(60, 30))
+        self.drawButton = wx.Button(self.right_panel, -1, _('Plot'), size=(60, 30))
+        self.clearButton = wx.Button(self.right_panel, -1, _('Clear'), size=(60, 30))
         hbox2 = wx.BoxSizer(wx.HORIZONTAL)
         hbox2.Add(self.drawButton, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL,3)
         hbox2.Add(self.clearButton, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL,3)
