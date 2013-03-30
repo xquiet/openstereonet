@@ -27,7 +27,7 @@ import gettext
 # Change this variable to your app name!
 #  The translation files will be under
 #  @LOCALE_DIR@/@LANGUAGE@/LC_MESSAGES/@APP_NAME@.mo
-APP_NAME = "OpenStereo"
+APP_NAME = "OpenStereoNet"
  
 # This is ok for maemo. Not sure in a regular desktop:
 #APP_DIR = os.path.join (sys.prefix, 'share')

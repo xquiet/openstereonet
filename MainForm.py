@@ -42,7 +42,7 @@
 #==============================================================================#
 
 """
-OpenStereo - Open-source, Multiplatform Stereonet Analysis
+OpenStereoNet - Open-source, Multiplatform Stereonet Analysis
 
 """
 
@@ -80,12 +80,12 @@ import ToolsDefs as tools # various tools: merge data, etc
 
 #----------------------------------------------------------------------
 class MainFrame(wx.Frame):
-    """ OpenStereo - Open-source, Multiplatform Stereonet Analysis """
+    """ OpenStereoNet - Open-source, Multiplatform Stereonet Analysis """
     def __init__(self, parent, ID, title, size):
         wx.Frame.__init__(self, parent, ID, title,(-1,-1),size)
         self.sb = self.CreateStatusBar()
 
-        self.pyversion = 'OpenStereo - Open-source, Multiplatform Stereonet Analysis'
+        self.pyversion = 'OpenStereoNet - Open-source, Multiplatform Stereonet Analysis'
 
         self.OpenStereo_version = '0.1.3' # this is for the 'about' box
 
@@ -790,43 +790,47 @@ class MainFrame(wx.Frame):
 # about box
     def onAboutDlg(self, event):
         info = wx.AboutDialogInfo()
-        info.Name = "OpenStereo"
+        info.Name = "OpenStereoNet"
         info.Version = self.OpenStereo_version
         info.Copyright = "(C) 2009-2011 Carlos H. Grohmann and Ginaldo A.C. Campanha"
         info.Copyright += "\n(C) 2012-2013 Matteo Pasotti"
         info.Description = wordwrap(
-            "OpenStereo is a Open-source, multiplatform software for "
+            "OpenStereoNet is a Open-source, multiplatform software for "
             "structural geology analysis using stereonets. ",
             350, wx.ClientDC(self.right_panel))
         #info.WebSite = ("http://www.igc.usp.br/openstereo", "Original OpenStereo Home Page")
-	info.WebSite = ("https://github.com/xquiet/openstereo", "OpenStereo fork hosted at GitHub")
+	info.WebSite = ("https://github.com/xquiet/openstereo", "OpenStereoNet")
         info.Developers = ["Carlos H. Grohmann & Ginaldo A.C. Campanha",
 			"Matteo Pasotti"]
-        info.License = wordwrap('''OpenStereo is free software: you can redistribute it and/or modify
+        info.License = wordwrap('''OpenStereoNet is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by 
 the Free Software Foundation, either version 3 of the License, or 
 (at your option) any later version. 
 
-OpenStereo is distributed in the hope that it will be useful, 
+OpenStereoNet is distributed in the hope that it will be useful, 
 but WITHOUT ANY WARRANTY; without even the implied warranty of 
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
 GNU General Public License for more details. 
 
 You should have received a copy of the GNU General Public License 
-along with OpenStereo.  If not, see <http://www.gnu.org/licenses/>.
+along with OpenStereoNet.  If not, see <http://www.gnu.org/licenses/>.
 
 
-Developed by: Carlos H. Grohmann & Ginaldo A.C. Campanha 
+Originally developed by: Carlos H. Grohmann & Ginaldo A.C. Campanha 
             Institute of Geosciences - University of Sao Paulo - Brazil 
             Rua do Lago, 562 - Sao Paulo - SP - Brazil - 05508-080 
             guano@usp.br, ginaldo@usp.br 
             http://www.igc.usp.br/openstereo 
+Forked by: Matteo Pasotti <matteo.pasotti@gmail.com>
+           Lombardy, Italy
+
 
 Requirements: 
      Python version 2.4 or higher 
      wxPython version 2.8.10 or higher 
      Matplotlib version 0.98 or higher 
      NumPy version 1.1 or higher 
+     Gettext
 
 ''', 500,
                                 wx.ClientDC(self.right_panel))

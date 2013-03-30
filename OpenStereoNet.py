@@ -45,10 +45,10 @@ import wx
 from MainForm import MainFrame
 
 class OpenStereo(wx.App):
-    """ OpenStereo - Open-source, Multiplatform Stereonet Analysis """
+    """ OpenStereoNet - Open-source, Multiplatform Stereonet Analysis """
     def OnInit(self):
         wx.InitAllImageHandlers()
-        MainWindow=MainFrame(None, -1, 'OpenStereo - Open-source, Multiplatform Stereonet Analysis', size=(800,550))
+        MainWindow=MainFrame(None, -1, 'OpenStereoNet - Open-source, Multiplatform Stereonet Analysis', size=(800,550))
         self.SetTopWindow(MainWindow)
         MainWindow.Show()
         return True

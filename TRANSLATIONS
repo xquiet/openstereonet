@@ -2,4 +2,4 @@
 xgettext --language=Python --keyword=_ --output=po/OpenStereo.pot `find . -name "*.py"`
 # compile translations
 # example
-msgfmt po/it_IT.po --output-file i18n/it_IT.UTF-8/LC_MESSAGES/OpenStereo.mo
+msgfmt po/it_IT.po --output-file i18n/it_IT.UTF-8/LC_MESSAGES/OpenStereoNet.mo
