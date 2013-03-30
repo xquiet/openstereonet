@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenStereo 0.1.2f\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-29 18:47+0100\n"
-"PO-Revision-Date: 2013-03-29 19:53+0100\n"
+"POT-Creation-Date: 2013-03-30 12:06+0100\n"
+"PO-Revision-Date: 2013-03-30 12:12+0100\n"
 "Last-Translator: Matteo Pasotti <matteo.pasotti@gmail.com>\n"
 "Language-Team:  <matteo@mageia.it>\n"
 "Language: \n"
@@ -18,147 +18,239 @@ msgstr ""
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
-#: MainForm.py:109
+#: MainForm.py:114
 msgid "Open &Planar Data (Dipdir/Dip)\tCtrl+P"
 msgstr "Apri Dati &Planari (Immersione/Inclinazione)\tCtrl+P"
 
-#: MainForm.py:109
-#: MainForm.py:209
+#: MainForm.py:114
+#: MainForm.py:214
 msgid "Open planar data (Dipdir/Dip)"
 msgstr "Apri dati planari (Immersione/Inclinazione)"
 
-#: MainForm.py:112
+#: MainForm.py:117
 msgid "Open Planar Data (&Strike/Dip)\tCtrl+S"
 msgstr "Apri Dati Planari (&Strike/Inclinazione)\tCtrl+S"
 
-#: MainForm.py:112
-#: MainForm.py:210
+#: MainForm.py:117
+#: MainForm.py:215
 msgid "Open planar data (Strike/Dip)"
 msgstr "Apri dati planari (&Strike/Inclinazione)"
 
-#: MainForm.py:115
+#: MainForm.py:120
 msgid "Open &Linear Data (Trend/Plunge)\tCtrl+L"
 msgstr "Apri Dati &Lineari (Trend/Plunge)\tCtrl+L"
 
-#: MainForm.py:115
-#: MainForm.py:211
+#: MainForm.py:120
+#: MainForm.py:216
 msgid "Open linear data (Trend/Plunge)"
 msgstr "Apri dati lineari (Trend/Plunge)"
 
-#: MainForm.py:118
+#: MainForm.py:123
 msgid "Open Small &Circle Data (Trend/Plunge/Radius)\tCtrl+C"
 msgstr "Apri Dati Piccolo &Cerchio (Trend/Plunge/Raggio)\tCtrl+C"
 
-#: MainForm.py:118
-#: MainForm.py:213
+#: MainForm.py:123
+#: MainForm.py:218
 msgid "Open Small Circle Data (Trend/Plunge/Radius)"
 msgstr "Apri Dati Piccolo Cerchio (Trend/Plunge/Raggio)"
 
-#: MainForm.py:125
+#: MainForm.py:130
 msgid "Open &Fault Data (Dipdir/Dip // Trend/Plunge // Sense)\tCtrl+F"
 msgstr "Apri Dati &Faglia (Immersione/Inclinazione // Trend/Plunge // Senso)\tCtrl+F"
 
-#: MainForm.py:125
+#: MainForm.py:130
 msgid "Open fault data (Dipdir/Dip // Trend/Plunge // Sense)"
 msgstr "Apri dati faglia (Immersione/Inclinazione // Trend/Plunge // Senso)"
 
-#: MainForm.py:128
+#: MainForm.py:133
 msgid "Open Pla&nes from Fault Data (Dipdir/Dip)\tCtrl+N"
 msgstr "Apri Pia&ni da Dati Faglia (Immersione/Inclinazione)\tCtrl+N"
 
-#: MainForm.py:128
+#: MainForm.py:133
 msgid "Open Planes from Fault Data (Dipdir/Dip)"
 msgstr "Apri Piani da Dati Faglia (Immersione/Inclinazione)"
 
-#: MainForm.py:131
+#: MainForm.py:136
 msgid "Open L&ines from Fault Data (Trend/Plunge)\tCtrl+I"
 msgstr "Apri L&inee da Dati Faglia (Trend/Plunge)\tCtrl+I"
 
-#: MainForm.py:131
+#: MainForm.py:136
 msgid "Open lines from Fault Data (Trend/Plunge)"
 msgstr "Apri linee da Dati Faglia (Trend/Plunge)"
 
-#: MainForm.py:134
+#: MainForm.py:139
 msgid "Open &TectonicsFP Fault Data (comma separated)\tCtrl+T"
 msgstr ""
 
-#: MainForm.py:134
+#: MainForm.py:139
 msgid "Open TectonicsFP Fault Data"
 msgstr ""
 
-#: MainForm.py:137
+#: MainForm.py:142
 msgid "Open T-T&ECTO Fault Data (tab separated)\tCtrl+E"
 msgstr ""
 
-#: MainForm.py:137
+#: MainForm.py:142
 msgid "Open T-TECTO Fault Data"
 msgstr ""
 
-#: MainForm.py:140
+#: MainForm.py:145
 msgid "F&ault Data"
 msgstr "Dati Faglia"
 
-#: MainForm.py:144
+#: MainForm.py:149
 msgid "&Quit"
 msgstr "Chiudi"
 
-#: MainForm.py:144
+#: MainForm.py:149
 msgid "Quit the program"
 msgstr "Chiudi il programma"
 
-#: MainForm.py:151
+#: MainForm.py:156
 msgid "&Merge datasets"
 msgstr "Unisci set di dati"
 
-#: MainForm.py:151
+#: MainForm.py:156
 msgid "Merge datasets"
 msgstr "Unisci set di dati"
 
-#: MainForm.py:154
+#: MainForm.py:159
 msgid "&Rotate datasets"
 msgstr "&Ruota set di dati"
 
-#: MainForm.py:154
+#: MainForm.py:159
 msgid "Rotate datasets"
 msgstr "Ruota set di dati"
 
-#: MainForm.py:195
+#: MainForm.py:200
 msgid "&About"
 msgstr ""
 
-#: MainForm.py:195
+#: MainForm.py:200
 msgid "About"
 msgstr ""
 
-#: MainForm.py:200
+#: MainForm.py:205
 msgid "&File"
 msgstr ""
 
-#: MainForm.py:201
+#: MainForm.py:206
 msgid "&Tools"
 msgstr "Strumenti"
 
-#: MainForm.py:202
+#: MainForm.py:207
 msgid "&Help"
 msgstr "Aiuto"
 
-#: MainForm.py:212
+#: MainForm.py:217
 msgid "Open Fault Data (Dipdir/Dip // Trend/Plunge // Sense)"
 msgstr "Apri Dati Faglia (Immersione/Inclinazione // Trend/Plunge // Sense)"
 
-#: MainForm.py:243
+#: MainForm.py:248
 msgid "Stereonet"
 msgstr "Stereonet"
 
-#: MainForm.py:244
+#: MainForm.py:249
 msgid "Rose diagram"
 msgstr "Diagramma a Rosa"
 
-#: MainForm.py:245
+#: MainForm.py:250
 msgid "Statistics"
 msgstr "Statistiche"
 
-#: MainForm.py:246
+#: MainForm.py:251
 msgid "Histogram"
 msgstr "Istrogramma"
+
+#: RosePanel.py:123
+msgid "Rose data"
+msgstr "Dati Rosa"
+
+#: RosePanel.py:124
+msgid "(planes)"
+msgstr "(piani)"
+
+#: RosePanel.py:125
+msgid "DipDir"
+msgstr "Immersione"
+
+#: RosePanel.py:126
+msgid "Strike"
+msgstr "Strike"
+
+#: RosePanel.py:127
+msgid "(lines)"
+msgstr "(linee)"
+
+#: RosePanel.py:128
+msgid "Trend"
+msgstr "Trend"
+
+#: RosePanel.py:131
+msgid "Rose type"
+msgstr "Tipo rosa"
+
+#: RosePanel.py:132
+msgid "360 deg"
+msgstr "360 gradi"
+
+#: RosePanel.py:133
+msgid "180 deg"
+msgstr "180 gradi"
+
+#: RosePanel.py:136
+msgid "Weighting"
+msgstr ""
+
+#: RosePanel.py:137
+msgid "Frequency"
+msgstr "Frequenza"
+
+#: RosePanel.py:138
+msgid "Weighted"
+msgstr ""
+
+#: RosePanel.py:157
+msgid "Interval (deg)"
+msgstr "Intervallo (gradi)"
+
+#: RosePanel.py:160
+msgid "Outer limit (%)"
+msgstr "Limite esterno (%)"
+
+#: RosePanel.py:163
+msgid "Inner rings (%)"
+msgstr "Anelli interni (%)"
+
+#: RosePanel.py:166
+msgid "Diagonals (deg)"
+msgstr "Diagonali (gradi)"
+
+#: RosePanel.py:169
+msgid "Fill Colour"
+msgstr "Colore Riempimento"
+
+#: RosePanel.py:173
+msgid "Outline Colour"
+msgstr "Colore Contorno"
+
+#: RosePanel.py:181
+msgid "Show Mean"
+msgstr "Mostra Media"
+
+#: RosePanel.py:184
+msgid "Line Colour"
+msgstr "Colore Linea"
+
+#: RosePanel.py:188
+msgid "Line Width"
+msgstr "Larghezza Linea"
+
+#: RosePanel.py:225
+msgid "Plot"
+msgstr "Plot"
+
+#: RosePanel.py:226
+msgid "Clear"
+msgstr "Pulisci"
 
