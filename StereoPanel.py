@@ -67,6 +67,10 @@ import numpy as np
 import ContourDefs as cont
 import PlotDefs as pd
 
+# import i18n
+import i18n
+_ = i18n.language.ugettext #use ugettext instead of getttext to avoid unicode errors
+
 #custom matplotlib navigation toolbar
 #from: http://www.nabble.com/Re%3A-Navigation-toolbar-w-o-subplot-configuration-button-p18754379.html
 class VMToolbar(NavigationToolbar2WxAgg):
@@ -108,8 +112,8 @@ class StereoPanel(wx.Panel):
         self.caxes.set_axis_off()
 
 # create draw/clear buttons 
-        self.clearNet_Button = wx.Button(self, -1, 'Clear', size=(60, 30))
-        self.plotNet_Button = wx.Button(self, -1, 'Plot', size=(60, 30))
+        self.clearNet_Button = wx.Button(self, -1, _('Clear'), size=(60, 30))
+        self.plotNet_Button = wx.Button(self, -1, _('Plot'), size=(60, 30))
 
         hboxTB = wx.BoxSizer(wx.HORIZONTAL)
         hboxTB.Add(self.plotNet_Button,0, wx.ALL|wx.ALIGN_CENTER_VERTICAL,3)

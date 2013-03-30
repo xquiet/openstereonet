@@ -56,7 +56,9 @@ from matplotlib.font_manager import fontManager, FontProperties
 from matplotlib.lines import Line2D
 from matplotlib.text import Text
 
-
+# import i18n
+import i18n
+_ = i18n.language.ugettext #use ugettext instead of getttext to avoid unicode errors
 
 #custom matplotlib navigation toolbar
 #from: http://www.nabble.com/Re%3A-Navigation-toolbar-w-o-subplot-configuration-button-p18754379.html
@@ -94,8 +96,8 @@ class StatsPanel(wx.Panel):
 
 #layout of widgets, left panel
         self.control1 = wx.TextCtrl(self.left_panel, -1, style=wx.TE_MULTILINE|wx.TE_READONLY|wx.HSCROLL)
-        self.copyBtn = wx.Button(self.left_panel, -1, 'Copy', size=(60, 30))
-        self.saveBtn = wx.Button(self.left_panel, -1, 'Save as', size=(60, 30))
+        self.copyBtn = wx.Button(self.left_panel, -1, _('Copy'), size=(60, 30))
+        self.saveBtn = wx.Button(self.left_panel, -1, _('Save as'), size=(60, 30))
 
         hboxbt = wx.BoxSizer(wx.HORIZONTAL)
         hboxbt.Add(self.saveBtn,0, wx.ALL|wx.ALIGN_CENTER_VERTICAL,3)
@@ -111,9 +113,9 @@ class StatsPanel(wx.Panel):
 
 #layout of canvas, right panel
 # create draw/clear buttons 
-        self.clearPlot_Button = wx.Button(self.right_panel, -1, 'Clear', size=(55, 30))
-        self.plotFlinn_Button = wx.Button(self.right_panel, -1, '2-axis', size=(55, 30))
-        self.plotVollmer_Button = wx.Button(self.right_panel, -1, 'Triang.', size=(55, 30))
+        self.clearPlot_Button = wx.Button(self.right_panel, -1, _('Clear'), size=(55, 30))
+        self.plotFlinn_Button = wx.Button(self.right_panel, -1, _('2-axis'), size=(55, 30))
+        self.plotVollmer_Button = wx.Button(self.right_panel, -1, _('Triang.'), size=(55, 30))
 
         hboxTB = wx.BoxSizer(wx.HORIZONTAL)
         hboxTB.Add(self.plotFlinn_Button,0, wx.ALL|wx.ALIGN_CENTER_VERTICAL,3)
@@ -613,7 +615,7 @@ class StatsPanel(wx.Panel):
 
         except AttributeError:
             self.dataFigure.clf()
-            dlg = wx.MessageDialog(None, 'No file(s) selected (checked).\n\n', 'Oooops!', wx.OK|wx.ICON_ERROR)
+            dlg = wx.MessageDialog(None, _('No file(s) selected (checked).\n\n'), _('Oooops!'), wx.OK|wx.ICON_ERROR)
             dlg.ShowModal()
             dlg.Destroy()
             pass

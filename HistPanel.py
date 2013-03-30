@@ -103,14 +103,14 @@ class HistPanel(wx.Panel):
         self.fontSize = 'x-small'
 
 #define the controls
-        txt = wx.StaticText(self.left_panel, -1, 'Histogram data')
-        txtp = wx.StaticText(self.left_panel, -1, '(planes)')
-        self.rb1 = wx.RadioButton(self.left_panel, -1, 'Dip Dir.', style=wx.RB_GROUP)
-        self.rb3 = wx.RadioButton(self.left_panel, -1, 'Strike')
-        self.rb2 = wx.RadioButton(self.left_panel, -1, 'Dip')
-        txtl = wx.StaticText(self.left_panel, -1, '(lines)')
-        self.rb4 = wx.RadioButton(self.left_panel, -1, 'Trend')
-        self.rb5 = wx.RadioButton(self.left_panel, -1, 'Plunge')
+        txt = wx.StaticText(self.left_panel, -1, _('Histogram data'))
+        txtp = wx.StaticText(self.left_panel, -1, _('(planes)'))
+        self.rb1 = wx.RadioButton(self.left_panel, -1, _('Dip Dir.'), style=wx.RB_GROUP)
+        self.rb3 = wx.RadioButton(self.left_panel, -1, _('Strike'))
+        self.rb2 = wx.RadioButton(self.left_panel, -1, _('Dip'))
+        txtl = wx.StaticText(self.left_panel, -1, _('(lines)'))
+        self.rb4 = wx.RadioButton(self.left_panel, -1, _('Trend'))
+        self.rb5 = wx.RadioButton(self.left_panel, -1, _('Plunge'))
         self.rb1.SetValue(True)
 
 
@@ -125,18 +125,18 @@ class HistPanel(wx.Panel):
         grid1.Add(self.rb4,0, wx.LEFT, 5)
         grid1.Add(self.rb5,0, wx.LEFT, 5)
         
-        txt1 = wx.StaticText(self.left_panel, -1, 'Interval (deg)')
+        txt1 = wx.StaticText(self.left_panel, -1, _('Interval (deg)'))
         self.spin = FS.FloatSpin(self.left_panel, -1, size=(60, -1), value=10, min_val=1, max_val=90, increment=1, digits=0)
 
-        txt2 = wx.StaticText(self.left_panel, -1, 'Fill Colour')
+        txt2 = wx.StaticText(self.left_panel, -1, _('Fill Colour'))
         self.fcbtn = csel.ColourSelect(self.left_panel, pos=(0, 0), size=(60, 20))
         self.fcbtn.SetColour(self.fcolor)
 
-        txt3 = wx.StaticText(self.left_panel, -1, 'Outline Colour')
+        txt3 = wx.StaticText(self.left_panel, -1, _('Outline Colour'))
         self.lcbtn = csel.ColourSelect(self.left_panel, pos=(0, 0), size=(60, 20))
         self.lcbtn.SetColour(self.lcolor)
 
-        self.cb_norm = wx.CheckBox(self.left_panel, -1, 'Normed')
+        self.cb_norm = wx.CheckBox(self.left_panel, -1, _('Normed'))
         self.cb_norm.SetValue(False)
 
 
@@ -155,8 +155,8 @@ class HistPanel(wx.Panel):
 
 
 # create draw/clear buttons 
-        self.drawButton = wx.Button(self.right_panel, -1, 'Plot', size=(60, 30))
-        self.clearButton = wx.Button(self.right_panel, -1, 'Clear', size=(60, 30))
+        self.drawButton = wx.Button(self.right_panel, -1, _('Plot'), size=(60, 30))
+        self.clearButton = wx.Button(self.right_panel, -1, _('Clear'), size=(60, 30))
         hbox2 = wx.BoxSizer(wx.HORIZONTAL)
         hbox2.Add(self.drawButton, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL,3)
         hbox2.Add(self.clearButton, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL,3)
@@ -368,27 +368,27 @@ class HistPanel(wx.Panel):
                 histdata = ddir
                 nbins = np.arange(0.,360.1,petal)
                 xmax=360
-                title = 'Dip Direction %s' % self.name
+                title = _('Dip Direction %s') % self.name
             elif strike:
                 histdata = strk
                 nbins = np.arange(0.,360.1,petal)
                 xmax=360
-                title = 'Strike %s' % self.name
+                title = _('Strike %s') % self.name
             elif dip:
                 histdata = dp
                 nbins = np.arange(0.,90.1,petal)
                 xmax=90
-                title = 'Dip %s' % self.name
+                title = _('Dip %s') % self.name
             elif trend:
                 histdata = trd
                 nbins = np.arange(0.,360.1,petal)
                 xmax=360
-                title = 'Trend %s' % self.name
+                title = _('Trend %s') % self.name
             elif plunge:
                 histdata = plng
                 nbins = np.arange(0.,90.1,petal)
                 xmax=90
-                title = 'Plunge %s' % self.name
+                title = _('Plunge %s') % self.name
 
 
             nph = np.histogram(histdata, bins=nbins, normed=normed)
@@ -401,7 +401,7 @@ class HistPanel(wx.Panel):
             self.histCanvas.draw()
 
 
-            self.mainframe.sb.SetStatusText('Histogram created for %s' % title)
+            self.mainframe.sb.SetStatusText(_('Histogram created for %s') % title)
 
 # this is from the 'try' right after 'def DrawHist'
         except (AttributeError, UnboundLocalError):
@@ -409,7 +409,7 @@ class HistPanel(wx.Panel):
             self.axes.cla()
             self.axes.set_axis_off()
             self.histCanvas.draw()
-            dlg = wx.MessageDialog(None, 'No file(s) selected (highlighted).\n\nOr maybe you are trying to make an histogram\nfor the wrong kind of data (like "trend" for planar data)', 'Oooops!', wx.OK|wx.ICON_ERROR)
+            dlg = wx.MessageDialog(None, _('No file(s) selected (highlighted).\n\nOr maybe you are trying to make an histogram\nfor the wrong kind of data (like "trend" for planar data)'), _('Oooops!'), wx.OK|wx.ICON_ERROR)
             dlg.ShowModal()
             dlg.Destroy()
             pass

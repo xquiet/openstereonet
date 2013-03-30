@@ -41,6 +41,10 @@ from wx.lib.pubsub import Publisher as pub
 
 import PropsDlgs as props
 
+# import i18n
+import i18n
+_ = i18n.language.ugettext #use ugettext instead of getttext to avoid unicode errors
+
 #---------------------------------------------------------------------------
 # CustomTreeCtrl Implementation
 #---------------------------------------------------------------------------
@@ -63,7 +67,7 @@ class CustomTreeCtrl(CT.CustomTreeCtrl):
         self.SetItemPyData(self.itemStereo, [0,'stereonet'])
 
         self.gridSpin = wx.SpinCtrl(self, -1, '10', size=(60, -1), min=1, max=45)
-        self.itemGrid = self.AppendItem (self.itemStereo, 'grid' , ct_type=1, wnd=self.gridSpin)
+        self.itemGrid = self.AppendItem (self.itemStereo, _('grid') , ct_type=1, wnd=self.gridSpin)
         self.SetItemPyData(self.itemGrid, [0,'grid'])
 #        self.CheckItem(self.itemGrid, checked=True)
 
