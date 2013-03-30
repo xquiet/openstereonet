@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-30 12:06+0100\n"
+"POT-Creation-Date: 2013-03-30 12:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,40 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: StereoPanel.py:115 StatsPanel.py:116 HistPanel.py:159 RosePanel.py:226
+msgid "Clear"
+msgstr ""
+
+#: StereoPanel.py:116 HistPanel.py:158 RosePanel.py:225
+msgid "Plot"
+msgstr ""
+
+#: StatsPanel.py:99
+msgid "Copy"
+msgstr ""
+
+#: StatsPanel.py:100
+msgid "Save as"
+msgstr ""
+
+#: StatsPanel.py:117
+msgid "2-axis"
+msgstr ""
+
+#: StatsPanel.py:118
+msgid "Triang."
+msgstr ""
+
+#: StatsPanel.py:618
+msgid ""
+"No file(s) selected (checked).\n"
+"\n"
+msgstr ""
+
+#: StatsPanel.py:618 HistPanel.py:412
+msgid "Oooops!"
+msgstr ""
 
 #: MainForm.py:114
 msgid "Open &Planar Data (Dipdir/Dip)\tCtrl+P"
@@ -157,28 +191,102 @@ msgstr ""
 msgid "Histogram"
 msgstr ""
 
+#: HistPanel.py:106
+msgid "Histogram data"
+msgstr ""
+
+#: HistPanel.py:107 RosePanel.py:124
+msgid "(planes)"
+msgstr ""
+
+#: HistPanel.py:108
+msgid "Dip Dir."
+msgstr ""
+
+#: HistPanel.py:109 RosePanel.py:126
+msgid "Strike"
+msgstr ""
+
+#: HistPanel.py:110
+msgid "Dip"
+msgstr ""
+
+#: HistPanel.py:111 RosePanel.py:127
+msgid "(lines)"
+msgstr ""
+
+#: HistPanel.py:112 RosePanel.py:128
+msgid "Trend"
+msgstr ""
+
+#: HistPanel.py:113
+msgid "Plunge"
+msgstr ""
+
+#: HistPanel.py:128 RosePanel.py:157
+msgid "Interval (deg)"
+msgstr ""
+
+#: HistPanel.py:131 RosePanel.py:169
+msgid "Fill Colour"
+msgstr ""
+
+#: HistPanel.py:135 RosePanel.py:173
+msgid "Outline Colour"
+msgstr ""
+
+#: HistPanel.py:139
+msgid "Normed"
+msgstr ""
+
+#: HistPanel.py:371
+#, python-format
+msgid "Dip Direction %s"
+msgstr ""
+
+#: HistPanel.py:376
+#, python-format
+msgid "Strike %s"
+msgstr ""
+
+#: HistPanel.py:381
+#, python-format
+msgid "Dip %s"
+msgstr ""
+
+#: HistPanel.py:386
+#, python-format
+msgid "Trend %s"
+msgstr ""
+
+#: HistPanel.py:391
+#, python-format
+msgid "Plunge %s"
+msgstr ""
+
+#: HistPanel.py:404
+#, python-format
+msgid "Histogram created for %s"
+msgstr ""
+
+#: HistPanel.py:412
+msgid ""
+"No file(s) selected (highlighted).\n"
+"\n"
+"Or maybe you are trying to make an histogram\n"
+"for the wrong kind of data (like \"trend\" for planar data)"
+msgstr ""
+
+#: TreePanel.py:70
+msgid "grid"
+msgstr ""
+
 #: RosePanel.py:123
 msgid "Rose data"
 msgstr ""
 
-#: RosePanel.py:124
-msgid "(planes)"
-msgstr ""
-
 #: RosePanel.py:125
 msgid "DipDir"
-msgstr ""
-
-#: RosePanel.py:126
-msgid "Strike"
-msgstr ""
-
-#: RosePanel.py:127
-msgid "(lines)"
-msgstr ""
-
-#: RosePanel.py:128
-msgid "Trend"
 msgstr ""
 
 #: RosePanel.py:131
@@ -205,10 +313,6 @@ msgstr ""
 msgid "Weighted"
 msgstr ""
 
-#: RosePanel.py:157
-msgid "Interval (deg)"
-msgstr ""
-
 #: RosePanel.py:160
 msgid "Outer limit (%)"
 msgstr ""
@@ -221,14 +325,6 @@ msgstr ""
 msgid "Diagonals (deg)"
 msgstr ""
 
-#: RosePanel.py:169
-msgid "Fill Colour"
-msgstr ""
-
-#: RosePanel.py:173
-msgid "Outline Colour"
-msgstr ""
-
 #: RosePanel.py:181
 msgid "Show Mean"
 msgstr ""
@@ -239,12 +335,4 @@ msgstr ""
 
 #: RosePanel.py:188
 msgid "Line Width"
-msgstr ""
-
-#: RosePanel.py:225
-msgid "Plot"
-msgstr ""
-
-#: RosePanel.py:226
-msgid "Clear"
 msgstr ""
