@@ -4,6 +4,7 @@
 #        OpenStereo - Open-source, Multiplatform Stereonet Analysis            #
 #                                                                              #
 #    Copyright (c)  2009-2011 Carlos H. Grohmann & Ginaldo A.C. Campanha.      #
+#    Copyright (c)  2012-2013 Matteo Pasotti <matteo.pasotti@gmail.com>        #
 #                                                                              #
 #                                                                              #
 #    This file is part of OpenStereo.                                          #
@@ -28,12 +29,16 @@
 #                Rua do Lago, 562 - Sao Paulo - SP - Brazil - 05508-080        #
 #                guano@usp.br, ginaldo@usp.br                                  #
 #                http://www.igc.usp.br/openstereo                              #
+#  Extended by:  Matteo Pasotti                                                #
+#                Italy                                                         #
+#                https://github.com/xquiet/openstereo                          #
 #                                                                              #
 #      Requirements:                                                           #
 #         Python version 2.4 or higher                                         #
 #         wxPython version 2.8.10 or higher                                    #
 #         Matplotlib version 0.98 or higher                                    #
 #         NumPy version 1.1 or higher                                          #
+#         gettext                                                              #
 #==============================================================================#
 
 """
