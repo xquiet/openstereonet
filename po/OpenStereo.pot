@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-29 18:47+0100\n"
+"POT-Creation-Date: 2013-03-30 12:06+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,142 +17,234 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: MainForm.py:109
+#: MainForm.py:114
 msgid "Open &Planar Data (Dipdir/Dip)\tCtrl+P"
 msgstr ""
 
-#: MainForm.py:109 MainForm.py:209
+#: MainForm.py:114 MainForm.py:214
 msgid "Open planar data (Dipdir/Dip)"
 msgstr ""
 
-#: MainForm.py:112
+#: MainForm.py:117
 msgid "Open Planar Data (&Strike/Dip)\tCtrl+S"
 msgstr ""
 
-#: MainForm.py:112 MainForm.py:210
+#: MainForm.py:117 MainForm.py:215
 msgid "Open planar data (Strike/Dip)"
 msgstr ""
 
-#: MainForm.py:115
+#: MainForm.py:120
 msgid "Open &Linear Data (Trend/Plunge)\tCtrl+L"
 msgstr ""
 
-#: MainForm.py:115 MainForm.py:211
+#: MainForm.py:120 MainForm.py:216
 msgid "Open linear data (Trend/Plunge)"
 msgstr ""
 
-#: MainForm.py:118
+#: MainForm.py:123
 msgid "Open Small &Circle Data (Trend/Plunge/Radius)\tCtrl+C"
 msgstr ""
 
-#: MainForm.py:118 MainForm.py:213
+#: MainForm.py:123 MainForm.py:218
 msgid "Open Small Circle Data (Trend/Plunge/Radius)"
 msgstr ""
 
-#: MainForm.py:125
+#: MainForm.py:130
 msgid "Open &Fault Data (Dipdir/Dip // Trend/Plunge // Sense)\tCtrl+F"
 msgstr ""
 
-#: MainForm.py:125
+#: MainForm.py:130
 msgid "Open fault data (Dipdir/Dip // Trend/Plunge // Sense)"
 msgstr ""
 
-#: MainForm.py:128
+#: MainForm.py:133
 msgid "Open Pla&nes from Fault Data (Dipdir/Dip)\tCtrl+N"
 msgstr ""
 
-#: MainForm.py:128
+#: MainForm.py:133
 msgid "Open Planes from Fault Data (Dipdir/Dip)"
 msgstr ""
 
-#: MainForm.py:131
+#: MainForm.py:136
 msgid "Open L&ines from Fault Data (Trend/Plunge)\tCtrl+I"
 msgstr ""
 
-#: MainForm.py:131
+#: MainForm.py:136
 msgid "Open lines from Fault Data (Trend/Plunge)"
 msgstr ""
 
-#: MainForm.py:134
+#: MainForm.py:139
 msgid "Open &TectonicsFP Fault Data (comma separated)\tCtrl+T"
 msgstr ""
 
-#: MainForm.py:134
+#: MainForm.py:139
 msgid "Open TectonicsFP Fault Data"
 msgstr ""
 
-#: MainForm.py:137
+#: MainForm.py:142
 msgid "Open T-T&ECTO Fault Data (tab separated)\tCtrl+E"
 msgstr ""
 
-#: MainForm.py:137
+#: MainForm.py:142
 msgid "Open T-TECTO Fault Data"
 msgstr ""
 
-#: MainForm.py:140
+#: MainForm.py:145
 msgid "F&ault Data"
 msgstr ""
 
-#: MainForm.py:144
+#: MainForm.py:149
 msgid "&Quit"
 msgstr ""
 
-#: MainForm.py:144
+#: MainForm.py:149
 msgid "Quit the program"
 msgstr ""
 
-#: MainForm.py:151
+#: MainForm.py:156
 msgid "&Merge datasets"
 msgstr ""
 
-#: MainForm.py:151
+#: MainForm.py:156
 msgid "Merge datasets"
 msgstr ""
 
-#: MainForm.py:154
+#: MainForm.py:159
 msgid "&Rotate datasets"
 msgstr ""
 
-#: MainForm.py:154
+#: MainForm.py:159
 msgid "Rotate datasets"
 msgstr ""
 
-#: MainForm.py:195
+#: MainForm.py:200
 msgid "&About"
 msgstr ""
 
-#: MainForm.py:195
+#: MainForm.py:200
 msgid "About"
 msgstr ""
 
-#: MainForm.py:200
+#: MainForm.py:205
 msgid "&File"
 msgstr ""
 
-#: MainForm.py:201
+#: MainForm.py:206
 msgid "&Tools"
 msgstr ""
 
-#: MainForm.py:202
+#: MainForm.py:207
 msgid "&Help"
 msgstr ""
 
-#: MainForm.py:212
+#: MainForm.py:217
 msgid "Open Fault Data (Dipdir/Dip // Trend/Plunge // Sense)"
 msgstr ""
 
-#: MainForm.py:243
+#: MainForm.py:248
 msgid "Stereonet"
 msgstr ""
 
-#: MainForm.py:244
+#: MainForm.py:249
 msgid "Rose diagram"
 msgstr ""
 
-#: MainForm.py:245
+#: MainForm.py:250
 msgid "Statistics"
 msgstr ""
 
-#: MainForm.py:246
+#: MainForm.py:251
 msgid "Histogram"
+msgstr ""
+
+#: RosePanel.py:123
+msgid "Rose data"
+msgstr ""
+
+#: RosePanel.py:124
+msgid "(planes)"
+msgstr ""
+
+#: RosePanel.py:125
+msgid "DipDir"
+msgstr ""
+
+#: RosePanel.py:126
+msgid "Strike"
+msgstr ""
+
+#: RosePanel.py:127
+msgid "(lines)"
+msgstr ""
+
+#: RosePanel.py:128
+msgid "Trend"
+msgstr ""
+
+#: RosePanel.py:131
+msgid "Rose type"
+msgstr ""
+
+#: RosePanel.py:132
+msgid "360 deg"
+msgstr ""
+
+#: RosePanel.py:133
+msgid "180 deg"
+msgstr ""
+
+#: RosePanel.py:136
+msgid "Weighting"
+msgstr ""
+
+#: RosePanel.py:137
+msgid "Frequency"
+msgstr ""
+
+#: RosePanel.py:138
+msgid "Weighted"
+msgstr ""
+
+#: RosePanel.py:157
+msgid "Interval (deg)"
+msgstr ""
+
+#: RosePanel.py:160
+msgid "Outer limit (%)"
+msgstr ""
+
+#: RosePanel.py:163
+msgid "Inner rings (%)"
+msgstr ""
+
+#: RosePanel.py:166
+msgid "Diagonals (deg)"
+msgstr ""
+
+#: RosePanel.py:169
+msgid "Fill Colour"
+msgstr ""
+
+#: RosePanel.py:173
+msgid "Outline Colour"
+msgstr ""
+
+#: RosePanel.py:181
+msgid "Show Mean"
+msgstr ""
+
+#: RosePanel.py:184
+msgid "Line Colour"
+msgstr ""
+
+#: RosePanel.py:188
+msgid "Line Width"
+msgstr ""
+
+#: RosePanel.py:225
+msgid "Plot"
+msgstr ""
+
+#: RosePanel.py:226
+msgid "Clear"
 msgstr ""
