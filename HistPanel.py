@@ -54,6 +54,9 @@ from matplotlib.backends.backend_wxagg import NavigationToolbar2WxAgg
 
 import numpy as np
 
+# import i18n
+import i18n
+_ = i18n.language.ugettext #use ugettext instead of getttext to avoid unicode errors
 
 #custom matplotlib navigation toolbar
 #from: http://www.nabble.com/Re%3A-Navigation-toolbar-w-o-subplot-configuration-button-p18754379.html
