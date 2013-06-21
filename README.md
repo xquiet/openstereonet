@@ -1,4 +1,4 @@
-![openstereonet logo](http://www.igc.usp.br/uploads/pics/openstereo_icon_01.png)
+![openstereonet logo](openstereonet.png)
 
 OpenStereoNet is an open source, cross-platform software for structural geology analysis.
 OpenStereoNet is a fork of OpenStereo. This fork aims to add some localization features to OpenStereo but, not only.
