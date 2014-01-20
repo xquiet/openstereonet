@@ -41,7 +41,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Circle
 from matplotlib.mlab import griddata
 from matplotlib import cm
-from matplotlib.nxutils import points_inside_poly
+from matplotlib.path import Path
 
 #import matplotlib.pyplot as plt
 
