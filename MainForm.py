@@ -794,7 +794,7 @@ class MainFrame(wx.Frame):
         info.Name = "OpenStereoNet"
         info.Version = self.OpenStereo_version
         info.Copyright = "(C) 2009-2011 Carlos H. Grohmann and Ginaldo A.C. Campanha"
-        info.Copyright += "\n(C) 2012-2013 Matteo Pasotti"
+        info.Copyright += "\n(C) 2012-2014 Matteo Pasotti"
         info.Description = wordwrap(
             "OpenStereoNet is a Open-source, multiplatform software for "
             "structural geology analysis using stereonets. ",
