@@ -4,7 +4,7 @@
 #        OpenStereo - Open-source, Multiplatform Stereonet Analysis            #
 #                                                                              #
 #    Copyright (c)  2009-2011 Carlos H. Grohmann & Ginaldo A.C. Campanha.      #
-#    Copyright (c)  2012-2013 Matteo Pasotti <matteo.pasotti@gmail.com>        #
+#    Copyright (c)  2012-2014 Matteo Pasotti <matteo.pasotti@gmail.com>        #
 #                                                                              #
 #                                                                              #
 #    This file is part of OpenStereo.                                          #
@@ -61,7 +61,7 @@ _ = i18n.language.ugettext #use ugettext instead of getttext to avoid unicode er
 # import matplotlib
 # this sets to use wxagg instead of pyQt
 import matplotlib as mpl
-mpl.use('WXAgg') 
+mpl.use('WXAgg')
 #mpl.rcParams['backend'] = 'WXAgg'
 #mpl.rcParams['savefig.extension'] = 'auto'
 
@@ -87,7 +87,7 @@ class MainFrame(wx.Frame):
 
         self.pyversion = 'OpenStereoNet - Open-source, Multiplatform Stereonet Analysis'
 
-        self.OpenStereo_version = '0.1.3' # this is for the 'about' box
+        self.OpenStereo_version = '0.1.4' # this is for the 'about' box
 
         self.currentDirectory = os.getcwd()
 
@@ -96,7 +96,8 @@ class MainFrame(wx.Frame):
         # remove matplotlib's fontList.cache, to prevent those Vera.ttf errors (mainly on Windows)
         configdir = mpl.get_configdir()
         listcache = os.path.join(configdir, 'fontList.cache')
-        os.remove(listcache)
+        if(os.path.isfile(listcache)):
+            os.remove(listcache)
 
 
 
@@ -141,7 +142,7 @@ class MainFrame(wx.Frame):
 
         menuOpenFaultTTECTO = fault.Append(-1, _('Open T-T&ECTO Fault Data (tab separated)\tCtrl+E'), _('Open T-TECTO Fault Data'))
         self.Bind(wx.EVT_MENU, self.OnOpenFaultTTECTO, menuOpenFaultTTECTO)
-        
+
         filemenu.AppendMenu(-1, _('F&ault Data'), fault)
 
 
@@ -160,10 +161,10 @@ class MainFrame(wx.Frame):
         self.Bind(wx.EVT_MENU, self.OnRotateData, menuRotateData)
 
         toolsmenu.AppendSeparator()
-        
+
         # options menu - so far, only font size
         self.opt = wx.Menu()
-        
+
         id_xxsmall = 1001
         id_xsmall = 1002
         id_small = 1003
@@ -231,7 +232,7 @@ class MainFrame(wx.Frame):
 
     #split the window in two and create panels
         panelsizer = wx.BoxSizer(wx.HORIZONTAL) # sizer
-        splitter = wx.SplitterWindow(self, -1) 
+        splitter = wx.SplitterWindow(self, -1)
         self.left_panel = wx.Panel(splitter, -1, style=wx.BORDER_SUNKEN)
         self.right_panel = wx.Panel(splitter, -1, style=wx.BORDER_SUNKEN)
         splitter.SetMinimumPaneSize(175) # cannot shrink panel to less than this
@@ -260,7 +261,7 @@ class MainFrame(wx.Frame):
         box.Add(self.tree, 1, wx.EXPAND)
         self.left_panel.SetSizer(box)
 
-        splitter.SplitVertically(self.left_panel,self.right_panel,185) 
+        splitter.SplitVertically(self.left_panel,self.right_panel,185)
         panelsizer.Add(splitter,1, wx.EXPAND)#|wx.ALL, 2) # the panels are inside this sizer with 2px border
         self.SetSizer(panelsizer)
 #        panelsizer.Fit(self)
@@ -311,7 +312,7 @@ class MainFrame(wx.Frame):
                     "DisplacePlotPoles":True, "DisplacePoleColor":'#4D4D4D', "DisplacePoleSymb":'o', "DisplacePoleSpin":3.0, \
                     "DisplaceArrowSpin":1.0, "DisplaceArrowColor":'#4D4D4D', "DisplaceArrowWidthSpin":1.0, \
                     "footwall":False}
-                    
+
         # default list of properties for small circle data
         self.scplist = {"pdata":'str',"itemName":'str',"ScColor":'#1E90FF',"ScSty":'-',"ScSpin":0.9, "ScFull":False}
 
@@ -340,7 +341,7 @@ class MainFrame(wx.Frame):
         image = OStereo_ico
         icon = wx.EmptyIcon()
         icon.CopyFromBitmap(image)
-        self.SetIcon(icon) 
+        self.SetIcon(icon)
 
 #        self.tbicon = TaskBarIcon(self)
 
@@ -348,11 +349,11 @@ class MainFrame(wx.Frame):
 #    # hide the frame
 #    def onMinimize(self, event):
 #        self.Hide()
-##        event.Skip()  
+##        event.Skip()
 
     def onShow(self, event):
         pub.sendMessage('object.axes_added', 1)
-#        event.Skip()  
+#        event.Skip()
 
 
 # receiving indexes
@@ -799,37 +800,37 @@ class MainFrame(wx.Frame):
             "structural geology analysis using stereonets. ",
             350, wx.ClientDC(self.right_panel))
         #info.WebSite = ("http://www.igc.usp.br/openstereo", "Original OpenStereo Home Page")
-	info.WebSite = ("https://github.com/xquiet/openstereo", "OpenStereoNet")
+        info.WebSite = ("https://github.com/xquiet/openstereo", "OpenStereoNet")
         info.Developers = ["Carlos H. Grohmann & Ginaldo A.C. Campanha",
-			"Matteo Pasotti"]
+                        "Matteo Pasotti"]
         info.License = wordwrap('''OpenStereoNet is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by 
-the Free Software Foundation, either version 3 of the License, or 
-(at your option) any later version. 
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-OpenStereoNet is distributed in the hope that it will be useful, 
-but WITHOUT ANY WARRANTY; without even the implied warranty of 
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
-GNU General Public License for more details. 
+OpenStereoNet is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License 
+You should have received a copy of the GNU General Public License
 along with OpenStereoNet.  If not, see <http://www.gnu.org/licenses/>.
 
 
-Originally developed by: Carlos H. Grohmann & Ginaldo A.C. Campanha 
-            Institute of Geosciences - University of Sao Paulo - Brazil 
-            Rua do Lago, 562 - Sao Paulo - SP - Brazil - 05508-080 
-            guano@usp.br, ginaldo@usp.br 
-            http://www.igc.usp.br/openstereo 
+Originally developed by: Carlos H. Grohmann & Ginaldo A.C. Campanha
+            Institute of Geosciences - University of Sao Paulo - Brazil
+            Rua do Lago, 562 - Sao Paulo - SP - Brazil - 05508-080
+            guano@usp.br, ginaldo@usp.br
+            http://www.igc.usp.br/openstereo
 Forked by: Matteo Pasotti <matteo.pasotti@gmail.com>
            Lombardy, Italy
 
 
-Requirements: 
-     Python version 2.4 or higher 
-     wxPython version 2.8.10 or higher 
-     Matplotlib version 0.98 or higher 
-     NumPy version 1.1 or higher 
+Requirements:
+     Python version 2.4 or higher
+     wxPython version 2.8.10 or higher
+     Matplotlib version 0.98 or higher
+     NumPy version 1.1 or higher
      Gettext
 
 ''', 500,
@@ -882,7 +883,7 @@ Requirements:
 
 # pubsub - retrieving fault data - from TreePanel (for list of loaded files)
     def __onReceiveFaultData(self, message):
-        
+
         try:
             len(self.Fname) # dummy action just to see if self.Lname exists
         except:
@@ -931,24 +932,24 @@ Requirements:
 
 # pubsub - retrieving indexes of deleted items (fromm TreePanel)
     def __onReceiveIdxItemsDel(self, message):
-        
-        if message.data[0] is not None: 
+
+        if message.data[0] is not None:
             PidxListDel = message.data[0]
-            self.Pname.pop(PidxListDel) 
+            self.Pname.pop(PidxListDel)
             self.Pndata.pop(PidxListDel)
             self.Pazim.pop(PidxListDel)
             self.Pdip.pop(PidxListDel)
             self.PidxList.pop(PidxListDel)
 
-        if message.data[1] is not None: 
+        if message.data[1] is not None:
             LidxListDel = message.data[1]
-            self.Lname.pop(LidxListDel) 
+            self.Lname.pop(LidxListDel)
             self.Lndata.pop(LidxListDel)
             self.Lazim.pop(LidxListDel)
             self.Ldip.pop(LidxListDel)
             self.LidxList.pop(LidxListDel)
-            
-        if message.data[2] is not None: 
+
+        if message.data[2] is not None:
             ScidxListDel = message.data[2]
             self.Scname.pop(ScidxListDel)
             self.Scndata.pop(ScidxListDel)
@@ -957,7 +958,7 @@ Requirements:
             self.Scalpha.pop(ScidxListDel)
             self.ScidxList.pop(ScidxListDel)
 
-        if message.data[3] is not None: 
+        if message.data[3] is not None:
             FidxListDel = message.data[3]
             self.Fname.pop(FidxListDel)
             self.Fndata.pop(FidxListDel)
@@ -989,11 +990,11 @@ Requirements:
             filesList.append([self.Scname,self.Scndata, self.Scazim, self.Scdip, self.Scalpha, self.ScidxList])
         except AttributeError:
             pass
-            
+
         try:
             filesList.append([self.Fname,self.Fndata,self.Fazim,self.Fdip,self.Ftrend,self.Fplunge,self.Fsense,self.FidxList])
         except AttributeError:
-            pass  
+            pass
 
         return filesList
 
@@ -1005,10 +1006,10 @@ Requirements:
         filesList = self.GetListOfFiles()
         mergedlg = tools.MergeData(self, -1, 'Merge Data', filesList)
 
-        try: 
+        try:
             newname, filename, azMerge, dpMerge, trMerge, pgMerge, snMerge, alphaMerge, dataType, \
             cb_append, cb_save, rbPlanar, rbLinear, rbSmall, rbFault =  mergedlg.onMergeData()
-            
+
             if cb_save:
                 # check what kind of data we have and then save
                 if 'S' in dataType: # small circle data
@@ -1021,7 +1022,7 @@ Requirements:
                     for i in range(len(azMerge)):
                         filehandle.write('%3.2f\t%3.2f\t%3.2f\t%3.2f\t%s\n' % (azMerge[i], dpMerge[i], trMerge[i], pgMerge[i], snMerge[i]))
                     filehandle.close()
-                else: # 'P' or 'L' in dataType: # merged has only planar or linear data, no need for a third column 
+                else: # 'P' or 'L' in dataType: # merged has only planar or linear data, no need for a third column
                     filehandle=open(newname,'wt')
                     for i in range(len(azMerge)):
                         filehandle.write('%3.2f\t%3.2f\n' % (azMerge[i], dpMerge[i]))
@@ -1030,16 +1031,16 @@ Requirements:
                 # now define if 'datalist' will be created from the saved file or from the data in memory
                 # from the file
                 datalist = datad.getData(newname)
-               
+
             else: # data in memory only
                 if 'S' in dataType:
                     datalist = [[azMerge[i], dpMerge[i], alphaMerge[i]] for i in range(len(azMerge))]
-                elif 'F' in dataType: 
+                elif 'F' in dataType:
                     datalist = [[azMerge[i], dpMerge[i], trMerge[i], pgMerge[i], snMerge[i]] for i in range(len(azMerge))]
-                else:    
+                else:
                     datalist = [[azMerge[i], dpMerge[i]] for i in range(len(azMerge))]
-                
-                    
+
+
 
 
             # check if data should be loaded in the tree
@@ -1080,7 +1081,7 @@ Requirements:
                     pub.sendMessage('object.Fault_added', self.faultData) # send to StereoPanel, TreePanel, RosePanel, StatsPanel and HistPanel
                     pub.sendMessage('object.Idxs', [self.DDD_idx,self.RH_idx,self.Lin_idx,self.Sc_idx,self.F_idx])
 
-                    
+
                 elif rbSmall:
                     self.scData =[]
                     filetype = 3 # 2 = small circle data
@@ -1105,7 +1106,7 @@ Requirements:
 
         rotadlg = tools.RotateData(self, -1, 'Rotate Data', filesList)
 
-        try: 
+        try:
             newname, filename, azRot, dpRot, trRot, pgRot, sense, alphaRot, dataType, \
             cb_append, cb_save, rbPlanar, rbLinear, rbSmall, rbFault =  rotadlg.onRotateData()
 
@@ -1121,7 +1122,7 @@ Requirements:
                     for i in range(len(azMerge)):
                         filehandle.write('%3.2f\t%3.2f\t%3.2f\t%3.2f\t%s\n' % (azRot[i], dpRot[i], trRot[i], pgRot[i], sense[i]))
                     filehandle.close()
-                else: # 'P' or 'L' in dataType: # merged has only planar or linear data, no need for a third column 
+                else: # 'P' or 'L' in dataType: # merged has only planar or linear data, no need for a third column
                     filehandle=open(newname,'wt')
                     for i in range(len(azMerge)):
                         filehandle.write('%3.2f\t%3.2f\n' % (azRot[i], dpRot[i]))
@@ -1129,16 +1130,16 @@ Requirements:
                 # now define if 'datalist' will be created from the saved file or from the data in memory
                 # from the file
                 datalist = datad.getData(newname)
-               
+
             else: # from data in memory
                 if 'S' in dataType:
                     datalist = [[azRot[i], dpRot[i], alphaRot[i]] for i in range(len(azRot))]
-                elif 'F' in dataType: 
+                elif 'F' in dataType:
                     datalist = [[azRot[i], dpRot[i], trRot[i], pgRot[i], sense[i]] for i in range(len(azRot))]
-                else:    
+                else:
                     datalist = [[azRot[i], dpRot[i]] for i in range(len(azRot))]
-                        
-                        
+
+
             # check if data should be loaded in the tree
             if cb_append:
                 if rbPlanar:
@@ -1269,6 +1270,3 @@ Requirements:
 
 #    def OnTaskBarClose(self, evt):
 #        wx.CallAfter(self.frame.Close)
-
-
-
