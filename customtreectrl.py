@@ -1947,7 +1947,7 @@ class CustomTreeCtrl(wx.PyScrolledWindow):
         if checkbox:
             render.DrawCheckBox(self, mdc, (0, 0, x, y), flag)
         else:
-            render.DrawRadioButton(self, mdc, (0, 0, x, y), flag)
+            render.DrawRadioBitmap(self, mdc, (0, 0, x, y), flag)
 
         mdc.SelectObject(wx.NullBitmap)
         bmp.SetMaskColour(mask)
