@@ -49,7 +49,8 @@ OpenStereoNet - Open-source, Multiplatform Stereonet Analysis
 import os, sys, csv
 import wx
 
-from wx.lib.pubsub import Publisher as pub
+from wx.lib.pubsub import setuparg1
+from wx.lib.pubsub import pub
 import types as types
 #import numpy as np
 from wx.lib.wordwrap import wordwrap

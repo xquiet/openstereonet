@@ -36,7 +36,8 @@
 
 import wx
 import os, sys
-from wx.lib.pubsub import Publisher as pub
+from wx.lib.pubsub import setuparg1
+from wx.lib.pubsub import pub
 
 
 #import matplotlib

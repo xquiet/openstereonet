@@ -46,7 +46,8 @@ from matplotlib.path import Path
 #import matplotlib.pyplot as plt
 
 
-from wx.lib.pubsub import Publisher as pub
+from wx.lib.pubsub import setuparg1
+from wx.lib.pubsub import pub
 
 # this is necessary as a workaround on py2exe's issues with scipy
 #import scipy.misc 

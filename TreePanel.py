@@ -37,7 +37,8 @@
 import wx 
 #import wx.lib.agw.customtreectrl as CT
 import customtreectrl as CT
-from wx.lib.pubsub import Publisher as pub
+from wx.lib.pubsub import setuparg1
+from wx.lib.pubsub import pub
 
 import PropsDlgs as props
 

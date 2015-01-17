@@ -44,7 +44,8 @@ import wx
 import scrolledpanel as scrolled
 import floatspin as FS
 
-from wx.lib.pubsub import Publisher as pub
+from wx.lib.pubsub import setuparg1
+from wx.lib.pubsub import pub
 import wx.lib.colourselect as csel
 
 from matplotlib.figure import Figure

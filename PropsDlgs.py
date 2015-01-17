@@ -40,7 +40,8 @@ import wx.lib.colourselect as csel
 import floatspin as FS
 #import wx.lib.agw.floatspin as FS
 import scrolledpanel as scrolled
-from wx.lib.pubsub import Publisher as pub
+from wx.lib.pubsub import setuparg1
+from wx.lib.pubsub import pub
 from matplotlib import cm
 
 symbolList = ['o       (circle)',\
