@@ -4,7 +4,7 @@
 #        OpenStereo - Open-source, Multiplatform Stereonet Analysis            #
 #                                                                              #
 #    Copyright (c)  2009-2011 Carlos H. Grohmann & Ginaldo A.C. Campanha.      #
-#    Copyright (c)  2012-2014 Matteo Pasotti <matteo.pasotti@gmail.com>        #
+#    Copyright (c)  2012-2015 Matteo Pasotti <matteo.pasotti@gmail.com>        #
 #                                                                              #
 #                                                                              #
 #    This file is part of OpenStereo.                                          #
